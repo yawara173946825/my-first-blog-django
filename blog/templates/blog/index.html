@@ -1,3 +1,6 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
 <h1>投稿一覧</h1>
 <ul>
     {% for post in object_list %}

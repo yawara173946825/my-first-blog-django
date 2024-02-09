@@ -38,7 +38,7 @@ class Migration(migrations.Migration):
                 ('content', models.TextField()),
                 ('description', models.TextField(blank=True)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(blank=True, null=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
                 ('published_at', models.DateTimeField(blank=True, null=True)),
                 ('is_public', models.BooleanField(default=False)),
                 ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='blog.category')),

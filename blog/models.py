@@ -29,6 +29,9 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     published_at = models.DateTimeField(blank=True, null=True)
     is_public = models.BooleanField(default=False)
+    image = models.ImageField(
+        upload_to='post_images/', null=True, blank=True
+    )
 
     class Meta:
         ordering = ['-created_at']

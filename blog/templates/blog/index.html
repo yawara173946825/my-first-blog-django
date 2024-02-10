@@ -6,7 +6,7 @@
     {% for post in object_list %}
     {% if user.is_authenticated or post.is_public %}
     <li>
-        {% if not post.is_public %}「下書き」： {% endif %}
+        {% if not post.is_public %}[下書き]{% endif %}
         <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a>
     <br>
     {% if post.image %}

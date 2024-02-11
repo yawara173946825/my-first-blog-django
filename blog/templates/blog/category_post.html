@@ -1,5 +1,5 @@
 <h1>「#{{ category.name }}」の投稿一覧</h1>
-{{object_list}}
+{{category.slug}}
 <ul>
     {% for post in object_list %}
     {% if user.is_authenticated or post.is_public %}

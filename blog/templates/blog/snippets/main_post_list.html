@@ -9,7 +9,7 @@
     {% endif %}
     <div class="card-body">
         {% if not post.is_public %}
-        <h5><span class="badge badge-secondary">下書き</span></h5>
+        <h5><span class="badge bg-secondary">下書き</span></h5>
         {% endif %}
         <a href="{% url 'blog:post_detail' post.id %}">
             <h5 class="card-title">{{ post.title }}</h5>

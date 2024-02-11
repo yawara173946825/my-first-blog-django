@@ -28,6 +28,7 @@ class PostDetailView(DetailView):
 class IndexView(ListView):
     model = Post
     template_name = 'blog/index.html'
+    paginate_by = 1
 
 # カテゴリ一覧（記事数）を表示するためのビュー
 class CategoryListView(ListView):

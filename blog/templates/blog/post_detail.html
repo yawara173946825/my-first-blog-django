@@ -1,3 +1,5 @@
+<main class="col-md-8">
+    <article class="blog-area">
 <h1>{{object.title}}</h1>
 <p>{{object.published_at|date}}</p>
 <p>{{object.category.name}}</p>
@@ -6,3 +8,9 @@
 {% endfor %}
 <hr>
 {{ object.content|safe }}
+</article>
+<article class="comment-area">
+    <a href="{% url 'blog:comment_form' post.pk %}" class="btn btn-primary">コメントを投稿する</a>
+    {% include 'blog/snippets/comments.html' %}
+</article>
+</main>
